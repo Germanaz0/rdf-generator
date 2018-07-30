@@ -1,0 +1,29 @@
+{
+  "name": "rdf-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "rdf",
+    "jsonld",
+    "parser",
+    "xlsx"
+  ],
+  "author": "Bortoli German",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "js-yaml": "^3.12.0",
+    "lodash": "^4.17.10",
+    "rdf-ext": "^1.1.0",
+    "rdf-parser-jsonld": "^1.1.0",
+    "rdf-serializer-ntriples": "^1.0.0",
+    "rdf-store-sparql": "^1.0.0",
+    "readable-stream": "^2.3.6",
+    "string-to-stream": "^1.1.1",
+    "xlsx": "^0.13.3"
+  }
+}

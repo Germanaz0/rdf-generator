@@ -1,0 +1,17 @@
+Sheet1:
+  context: http://schema.org
+  type: Person
+  map:
+    - {from: "Full Name", to: "name"}
+    - {from: "Email", to: "email"}
+    - {from: "Gender", to: "gender"}
+    - {from: "Nationality", to: "nationality"}
+    - {from: "Telephone", to: "telephone"}
+    - {from: "Birthdate", to: "birthDate"}
+    - {from: "Place of Birth", to: "birthPlace"}
+    - {from: "Job Title", to: "jobTitle"}
+    - {from: "Address Locality", to: "addressLocality"}
+    - {from: "Address Region", to: "addressRegion"}
+    - {from: "Postal Code", to: "postalCode"}
+    - {from: "Address Street", to: "streetAddress"}
+    - {from: "Height", to: "height"}
