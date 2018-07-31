@@ -23,22 +23,17 @@ let mappedJsonLD = utils.mapParsedFile(rawJson, config);
 let parser = new JSONLDParser();
 let stream = parser.import(stringToStream(JSON.stringify(mappedJsonLD)));
 
+let output = []
+
+stream.on('data', (triple) => {
+  output.push(triple);
+
+})
+
 let store = new SparqlStore({
     endpointUrl: 'http://localhost:10037/repositories/testPeople/sparql'
 });
 
-let output = []
-
-stream.on('data', (triple) => {
-  output.push(triple)
-})
-
-// console.log(store);
-// return rdf.waitFor(stream).then(() => {
-    // console.log(output);
-// });
-
 return rdf.waitFor(store.import(stream)).then((outp) => {
     console.log(outp);
   }, (error) => console.log(">>> ERROR", error));
-  
